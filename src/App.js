@@ -13,7 +13,7 @@ const App = () => {
     <div className="App">
       <ErrorBoundry>
         <Person person={person} />
-        <Person person={{}} />
+        {/* <Person person={{}} /> */}
 
         <ClickCounter />
       </ErrorBoundry>
