@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ErrorBoundry from "./ErrorBoundary";
+import Person from "./Person";
+import ClickCounter from "./ClickCounter";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const person = {
+    firstName: "Ashish",
+    lastName: "Pandey",
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ErrorBoundry>
+        <Person person={person} />
+        <Person person={{}} />
+
+        <ClickCounter />
+      </ErrorBoundry>
     </div>
   );
-}
+};
 
 export default App;
